@@ -7,6 +7,10 @@ public class Student extends Person {
         super(id, name, age);
     }
 
+    public int getKlassNumber() {
+        return klassNumber;
+    }
+
     public void join(Klass klass) {
         klassNumber = klass.getNumber();
     }
