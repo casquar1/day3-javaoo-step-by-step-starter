@@ -8,7 +8,7 @@ public class Klass {
 
     private final int number;
     private Student leader;
-    private List<Person> persons = new ArrayList<>();
+    private final List<Person> persons = new ArrayList<>();
 
     public Klass(int number) {
         this.number = number;

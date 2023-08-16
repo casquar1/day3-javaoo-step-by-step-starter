@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class Teacher extends Person {
 
-    private List<Integer> klassNumber = new ArrayList<>();;
+    private final List<Integer> klassNumber = new ArrayList<>();;
     public Teacher(int id, String name, int age) {
         super(id, name, age);
     }
