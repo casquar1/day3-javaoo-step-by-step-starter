@@ -23,7 +23,7 @@ public class Teacher extends Person {
     public String introduce() {
         String teacherIntroduction = super.introduce().concat(" I am a teacher.");
         if (!klassNumber.isEmpty()) {
-            teacherIntroduction = teacherIntroduction.concat(" I teach Class " + klassNumber.toString().replace("[", "").replace("]", "") + ".");
+            teacherIntroduction = teacherIntroduction.concat(" I teach Class " + klassNumber.stream().map(String::valueOf).collect(Collectors.joining(", ")) + ".");
         }
         return teacherIntroduction;
     }
