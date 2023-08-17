@@ -40,8 +40,8 @@ public class Klass {
             setLeader(student);
             student.setLeader(true);
             leaderMessage();
-        }
-        System.out.println("It is not one of us.");
+        } else
+            System.out.println("It is not one of us.");
     }
 
     public boolean isLeader(Student student) {
