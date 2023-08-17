@@ -25,7 +25,6 @@ public class Student extends Person {
         this.isLeader = leader;
     }
 
-    @Override
     public String introduce() {
         if (isLeader) {
             return super.introduce().concat(" I am a student. I am the leader of class " + klassNumber + ".");

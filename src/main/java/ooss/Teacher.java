@@ -19,8 +19,7 @@ public class Teacher extends Person {
     public boolean belongsTo(Klass klass) {
        return klassNumber.contains(klass.getNumber());
     }
-
-    @Override
+    
     public String introduce() {
         return !klassNumber.isEmpty() ? super.introduce().concat(" I am a teacher. I teach Class " + klassNumber.toString().replace("[", "").replace("]", "") + ".") :
                 super.introduce().concat(" I am a teacher.");
