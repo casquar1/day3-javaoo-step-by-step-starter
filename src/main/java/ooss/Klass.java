@@ -54,11 +54,8 @@ public class Klass {
 
     public void leaderMessage() {
         for (Person person: persons) {
-            if (person instanceof Teacher) {
-                System.out.printf("I am %s, teacher of Class %d. I know %s become Leader.", person.getName(), number, leader.getName());
-            } else {
-                System.out.printf("I am %s, student of Class %d. I know %s become Leader.", person.getName(), number, leader.getName());
-            }
+            String personType = person instanceof Teacher ? "teacher" : "student";
+            System.out.printf("I am %s, %s of Class %d. I know %s become Leader.", person.getName(), personType, number, leader.getName());
         }
     }
 }
