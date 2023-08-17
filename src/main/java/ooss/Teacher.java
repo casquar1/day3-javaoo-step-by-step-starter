@@ -21,8 +21,11 @@ public class Teacher extends Person {
     }
     
     public String introduce() {
-        return !klassNumber.isEmpty() ? super.introduce().concat(" I am a teacher. I teach Class " + klassNumber.toString().replace("[", "").replace("]", "") + ".") :
-                super.introduce().concat(" I am a teacher.");
+        String teacherIntroduction = super.introduce().concat(" I am a teacher.");
+        if (!klassNumber.isEmpty()) {
+            teacherIntroduction = teacherIntroduction.concat(" I teach Class " + klassNumber.toString().replace("[", "").replace("]", "") + ".");
+        }
+        return teacherIntroduction;
     }
 
     public boolean isTeaching(Student student) {
