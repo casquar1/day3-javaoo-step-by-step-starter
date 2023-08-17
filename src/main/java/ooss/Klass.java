@@ -22,19 +22,6 @@ public class Klass {
         this.leader = leader;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Klass klass = (Klass) o;
-        return number == klass.number;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(number);
-    }
-
     public void assignLeader(Student student) {
         if (student.isIn(this)) {
             setLeader(student);
@@ -57,5 +44,18 @@ public class Klass {
             String personType = person instanceof Teacher ? "teacher" : "student";
             System.out.printf("I am %s, %s of Class %d. I know %s become Leader.", person.getName(), personType, number, leader.getName());
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Klass klass = (Klass) o;
+        return number == klass.number;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(number);
     }
 }
