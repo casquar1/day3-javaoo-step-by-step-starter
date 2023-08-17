@@ -26,10 +26,12 @@ public class Student extends Person {
     }
 
     public String introduce() {
+        String studentIntroduction = super.introduce().concat(" I am a student.");
         if (isLeader) {
-            return super.introduce().concat(" I am a student. I am the leader of class " + klassNumber + ".");
+            studentIntroduction = studentIntroduction.concat(" I am the leader of class " + klassNumber + ".");
+        } else if (klassNumber != 0) {
+            studentIntroduction = studentIntroduction.concat(" I am in class " + klassNumber + ".");
         }
-        return klassNumber != 0 ? super.introduce().concat(" I am a student. I am in class " + klassNumber + ".") :
-                super.introduce().concat(" I am a student.");
+        return studentIntroduction;
     }
 }
